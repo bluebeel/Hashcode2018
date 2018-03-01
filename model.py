@@ -28,8 +28,16 @@ scores.reverse()
 res = []
 for v in range(1, F+1):
     res.append([v, [scores[v-1][0]]])
-print(res)
 
+
+
+for i in range(F):
+    res.append([i+1])
+for i in range(N):
+    print(scores[i][0])
+    res[i%F][1].append(scores[i][0])
+
+#print(res)
 out = ''
 with open(filename + '.out', 'w') as t:
     for line in res:
