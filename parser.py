@@ -1,6 +1,3 @@
-from model import *
-
-
 def parse(filename):
     with open(filename) as f:
         inputstr = f.readlines()
